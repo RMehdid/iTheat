@@ -11,6 +11,7 @@
 		99100E462A2280ED00F36FEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99100E452A2280ED00F36FEC /* ContentView.swift */; };
 		99100E482A2280EE00F36FEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99100E472A2280EE00F36FEC /* Assets.xcassets */; };
 		99100E4C2A2280EE00F36FEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99100E4B2A2280EE00F36FEC /* Preview Assets.xcassets */; };
+		99100E532A22811800F36FEC /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99100E522A22811800F36FEC /* NavBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		99100E472A2280EE00F36FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99100E492A2280EE00F36FEC /* iTheat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iTheat.entitlements; sourceTree = "<group>"; };
 		99100E4B2A2280EE00F36FEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		99100E522A22811800F36FEC /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				99100E432A2280ED00F36FEC /* iTheatApp.swift */,
 				99100E452A2280ED00F36FEC /* ContentView.swift */,
+				99100E542A22811E00F36FEC /* Components */,
 				99100E472A2280EE00F36FEC /* Assets.xcassets */,
 				99100E492A2280EE00F36FEC /* iTheat.entitlements */,
 				99100E4A2A2280EE00F36FEC /* Preview Content */,
@@ -67,6 +70,14 @@
 				99100E4B2A2280EE00F36FEC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		99100E542A22811E00F36FEC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				99100E522A22811800F36FEC /* NavBar.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 			files = (
 				99100E462A2280ED00F36FEC /* ContentView.swift in Sources */,
 				99100E442A2280ED00F36FEC /* iTheatApp.swift in Sources */,
+				99100E532A22811800F36FEC /* NavBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
