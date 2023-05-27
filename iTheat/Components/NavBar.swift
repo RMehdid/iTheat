@@ -8,13 +8,52 @@
 import SwiftUI
 
 struct NavBar: View {
+    
+    @State private var searchText: String = ""
+    
+    var onSearch: (String) -> Void
+    var onMenuOpen: () -> Void
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            MenuButton()
+            SearchBar()
+        }
+    }
+    
+    @ViewBuilder
+    private func MenuButton() -> some View {
+        Button(action: onMenuOpen){
+            Image("ic_slider-vertical")
+                .padding()
+                .overlay {
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(.white, lineWidth: 2)
+                }
+        }
+    }
+    
+    @ViewBuilder
+    private func SearchBar() -> some View {
+        HStack{
+            TextField("Search movies", text: $searchText)
+            Spacer()
+            Image("ic_search-normal")
+        }
+        .padding()
+        .overlay {
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(.white, lineWidth: 2)
+        }
     }
 }
 
 struct NavBar_Previews: PreviewProvider {
     static var previews: some View {
-        NavBar()
+        NavBar{ _ in
+            
+        } onMenuOpen: {
+            
+        }
     }
 }
