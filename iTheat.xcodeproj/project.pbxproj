@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		576701FA2A23626D008A3F67 /* MovieCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576701F92A23626D008A3F67 /* MovieCard.swift */; };
+		576701FC2A2362F5008A3F67 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576701FB2A2362F5008A3F67 /* Movie.swift */; };
+		576702012A24A583008A3F67 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576702002A24A583008A3F67 /* NetworkService.swift */; };
+		576702042A24A69B008A3F67 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 576702032A24A69B008A3F67 /* Alamofire */; };
+		576702062A24A964008A3F67 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576702052A24A964008A3F67 /* Error.swift */; };
+		5767020A2A24AA5F008A3F67 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576702092A24AA5F008A3F67 /* String.swift */; };
+		5767020E2A24AB6E008A3F67 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5767020D2A24AB6E008A3F67 /* UserDefaults.swift */; };
+		576702102A24AC30008A3F67 /* AuthRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5767020F2A24AC30008A3F67 /* AuthRepo.swift */; };
+		576702132A24B583008A3F67 /* GuestSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576702122A24B583008A3F67 /* GuestSession.swift */; };
 		99100E442A2280ED00F36FEC /* iTheatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99100E432A2280ED00F36FEC /* iTheatApp.swift */; };
 		99100E462A2280ED00F36FEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99100E452A2280ED00F36FEC /* ContentView.swift */; };
 		99100E482A2280EE00F36FEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99100E472A2280EE00F36FEC /* Assets.xcassets */; };
@@ -15,6 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		576701F92A23626D008A3F67 /* MovieCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCard.swift; sourceTree = "<group>"; };
+		576701FB2A2362F5008A3F67 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		576702002A24A583008A3F67 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		576702052A24A964008A3F67 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		576702092A24AA5F008A3F67 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		5767020D2A24AB6E008A3F67 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		5767020F2A24AC30008A3F67 /* AuthRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepo.swift; sourceTree = "<group>"; };
+		576702122A24B583008A3F67 /* GuestSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestSession.swift; sourceTree = "<group>"; };
 		99100E402A2280ED00F36FEC /* iTheat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTheat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99100E432A2280ED00F36FEC /* iTheatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTheatApp.swift; sourceTree = "<group>"; };
 		99100E452A2280ED00F36FEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -29,12 +46,84 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				576702042A24A69B008A3F67 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		576701FD2A2362FA008A3F67 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				576702082A24A976008A3F67 /* remote */,
+				576702072A24A970008A3F67 /* local */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		576701FE2A24A4C3008A3F67 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				99100E432A2280ED00F36FEC /* iTheatApp.swift */,
+				99100E452A2280ED00F36FEC /* ContentView.swift */,
+				99100E542A22811E00F36FEC /* Components */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		576701FF2A24A563008A3F67 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				576702002A24A583008A3F67 /* NetworkService.swift */,
+				576702112A24AC50008A3F67 /* Repos */,
+				576701FD2A2362FA008A3F67 /* Models */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		576702072A24A970008A3F67 /* local */ = {
+			isa = PBXGroup;
+			children = (
+				576702052A24A964008A3F67 /* Error.swift */,
+			);
+			path = local;
+			sourceTree = "<group>";
+		};
+		576702082A24A976008A3F67 /* remote */ = {
+			isa = PBXGroup;
+			children = (
+				576701FB2A2362F5008A3F67 /* Movie.swift */,
+				576702122A24B583008A3F67 /* GuestSession.swift */,
+			);
+			path = remote;
+			sourceTree = "<group>";
+		};
+		5767020B2A24AA64008A3F67 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5767020C2A24AA6B008A3F67 /* Foundation */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5767020C2A24AA6B008A3F67 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				576702092A24AA5F008A3F67 /* String.swift */,
+				5767020D2A24AB6E008A3F67 /* UserDefaults.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		576702112A24AC50008A3F67 /* Repos */ = {
+			isa = PBXGroup;
+			children = (
+				5767020F2A24AC30008A3F67 /* AuthRepo.swift */,
+			);
+			path = Repos;
+			sourceTree = "<group>";
+		};
 		99100E372A2280ED00F36FEC = {
 			isa = PBXGroup;
 			children = (
@@ -54,9 +143,9 @@
 		99100E422A2280ED00F36FEC /* iTheat */ = {
 			isa = PBXGroup;
 			children = (
-				99100E432A2280ED00F36FEC /* iTheatApp.swift */,
-				99100E452A2280ED00F36FEC /* ContentView.swift */,
-				99100E542A22811E00F36FEC /* Components */,
+				5767020B2A24AA64008A3F67 /* Extensions */,
+				576701FE2A24A4C3008A3F67 /* UserInterface */,
+				576701FF2A24A563008A3F67 /* Network */,
 				99100E472A2280EE00F36FEC /* Assets.xcassets */,
 				99100E492A2280EE00F36FEC /* iTheat.entitlements */,
 				99100E4A2A2280EE00F36FEC /* Preview Content */,
@@ -76,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				99100E522A22811800F36FEC /* NavBar.swift */,
+				576701F92A23626D008A3F67 /* MovieCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -96,6 +186,9 @@
 			dependencies = (
 			);
 			name = iTheat;
+			packageProductDependencies = (
+				576702032A24A69B008A3F67 /* Alamofire */,
+			);
 			productName = iTheat;
 			productReference = 99100E402A2280ED00F36FEC /* iTheat.app */;
 			productType = "com.apple.product-type.application";
@@ -124,6 +217,9 @@
 				Base,
 			);
 			mainGroup = 99100E372A2280ED00F36FEC;
+			packageReferences = (
+				576702022A24A69B008A3F67 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 99100E412A2280ED00F36FEC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -150,9 +246,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				576701FA2A23626D008A3F67 /* MovieCard.swift in Sources */,
 				99100E462A2280ED00F36FEC /* ContentView.swift in Sources */,
 				99100E442A2280ED00F36FEC /* iTheatApp.swift in Sources */,
+				576702132A24B583008A3F67 /* GuestSession.swift in Sources */,
 				99100E532A22811800F36FEC /* NavBar.swift in Sources */,
+				576702012A24A583008A3F67 /* NetworkService.swift in Sources */,
+				5767020E2A24AB6E008A3F67 /* UserDefaults.swift in Sources */,
+				576702062A24A964008A3F67 /* Error.swift in Sources */,
+				5767020A2A24AA5F008A3F67 /* String.swift in Sources */,
+				576702102A24AC30008A3F67 /* AuthRepo.swift in Sources */,
+				576701FC2A2362F5008A3F67 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +470,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		576702022A24A69B008A3F67 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		576702032A24A69B008A3F67 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 576702022A24A69B008A3F67 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 99100E382A2280ED00F36FEC /* Project object */;
 }
